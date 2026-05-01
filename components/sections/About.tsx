@@ -45,7 +45,7 @@ export function About() {
           >
             <div className="flex flex-col gap-4 text-left">
               <div className="rounded-[32px] bg-brand-gradient p-1.5 shadow-soft">
-                <div className="relative h-56 w-full overflow-hidden rounded-[26px] bg-bg sm:h-64">
+                <div className="relative w-full overflow-hidden rounded-[26px] bg-bg aspect-square sm:aspect-[5/4]">
                   <Image
                     src="/images/mentors/rifal-ceo.png"
                     alt={content.about.founderName}
@@ -97,7 +97,6 @@ export function About() {
                     <Sparkles className="h-5 w-5" />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">{content.about.values.label}</p>
                     <p className="font-poppins text-lg font-bold text-text">{content.about.values.heading}</p>
                   </div>
                 </div>

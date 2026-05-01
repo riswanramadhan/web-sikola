@@ -60,7 +60,10 @@ export function Navbar() {
   ]
 
   return (
-    <header
+    <motion.header
+      initial={{ opacity: 0, y: 24 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.45, ease: 'easeOut' }}
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         isScrolled ? 'border-b border-border bg-white/90 shadow-sm backdrop-blur-md' : 'bg-transparent'
       }`}
@@ -144,12 +147,20 @@ export function Navbar() {
               ))}
 
               <div className="mt-2 border-t border-border/60 pt-3 text-center text-xs text-muted">
-                Powered by <span className="font-bold underline">DekatLokal</span>
+                Powered by{' '}
+                <a
+                  href="https://www.dekatlokal.com"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="font-bold underline"
+                >
+                  DekatLokal
+                </a>
               </div>
             </div>
           </motion.div>
         ) : null}
       </AnimatePresence>
-    </header>
+    </motion.header>
   )
 }

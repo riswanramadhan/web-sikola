@@ -77,7 +77,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45 }}
-            className="inline-flex items-center gap-2 rounded-full border border-primary/10 bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary shadow-sm backdrop-blur"
+            className="inline-flex items-center gap-2 rounded-full border border-primary/10 bg-white/80 px-3 py-2 text-[0.55rem] font-semibold uppercase tracking-[0.12em] text-primary shadow-sm backdrop-blur sm:px-4 sm:text-xs sm:tracking-[0.2em] whitespace-nowrap"
           >
             <Sparkles className="h-4 w-4 text-accent" />
             {content.hero.label}

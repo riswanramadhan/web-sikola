@@ -19,9 +19,8 @@ export function Mentors() {
 
       <motion.div
         initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.45 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.45, ease: 'easeOut' }}
         className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3"
       >
         {content.mentors.items.map((mentor) => (

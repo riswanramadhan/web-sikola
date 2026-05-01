@@ -41,13 +41,13 @@ export const id: SiteContent = {
     founderUniversity: 'Universitas Hasanuddin',
     vision: {
       label: 'Visi',
-      heading: 'Visi Kami',
+      heading: 'Visi',
       content:
         'Menjadi platform pembelajaran berbasis personalisasi terdepan di Indonesia yang membuka akses pembinaan berkualitas bagi mahasiswa untuk berprestasi, berkontribusi, dan tumbuh secara berkelanjutan.'
     },
     mission: {
       label: 'Misi',
-      heading: 'Misi Kami',
+      heading: 'Misi',
       points: [
         'Menyediakan mentoring yang relevan dan terukur sesuai kebutuhan peserta.',
         'Membangun ekosistem belajar yang suportif, inklusif, dan kolaboratif.',
