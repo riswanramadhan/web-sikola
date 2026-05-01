@@ -71,7 +71,7 @@ export function Hero() {
       <div className="absolute left-10 top-24 -z-10 h-32 w-32 rounded-full bg-primary/10 blur-3xl animate-floaty" />
       <div className="absolute right-10 top-40 -z-10 h-40 w-40 rounded-full bg-accent/15 blur-3xl animate-floaty" />
 
-      <div className="section-shell flex min-h-[calc(100vh-5rem)] items-center pt-10 sm:pt-12">
+      <div className="section-shell flex min-h-[calc(100vh-5rem)] items-center mt-6 lg:pt-6">
         <div className="mx-auto max-w-4xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -83,7 +83,7 @@ export function Hero() {
             {content.hero.label}
           </motion.div>
 
-          <div className="mt-8 flex justify-center">
+          <div className="mt-8 lg:mt-16 flex justify-center">
             <motion.h1
               initial="hidden"
               animate="visible"
@@ -91,7 +91,7 @@ export function Hero() {
                 hidden: {},
                 visible: { transition: { staggerChildren: 0.12 } }
               }}
-              className="relative inline-flex flex-col items-start overflow-visible text-left font-poppins text-[4.2rem] font-extrabold leading-[0.9] tracking-tight sm:text-[5.6rem] lg:text-[8.9rem]"
+              className="relative inline-flex flex-col items-start overflow-visible text-left font-poppins text-[3.2rem] leading-[0.55] tracking-tight sm:text-[5.6rem] lg:text-[8.9rem]"
             >
               <span
                 className="block"
@@ -101,7 +101,7 @@ export function Hero() {
               >
                 <motion.span
                   variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
-                  className="inline-block bg-clip-text text-transparent"
+                  className="bg-clip-text text-transparent font-extrabold"
                   style={{
                     backgroundImage: 'linear-gradient(90deg, #053c63 0%, #045498 100%)',
                     WebkitBackgroundClip: 'text',
@@ -120,13 +120,13 @@ export function Hero() {
                   style={{
                     marginTop: '0em',
                     paddingRight: 'clamp(4.8rem, 10vw, 9.25rem)',
-                    fontSize: '0.585em',
+                    fontSize: '0.535em',
                     lineHeight: 0.90,
                     isolation: 'isolate'
                   }}
                 >
                   <span
-                    className="relative z-10 inline-block bg-clip-text text-transparent"
+                    className="relative z-10 inline-block bg-clip-text text-transparent font-semibold"
                     style={{
                       backgroundImage: 'linear-gradient(90deg, #fef626 0%, #fdaf0f 100%)',
                       WebkitBackgroundClip: 'text',
@@ -141,16 +141,12 @@ export function Hero() {
                     src="/images/bintang.png"
                     alt=""
                     aria-hidden="true"
-                    className="pointer-events-none absolute"
+                    className="pointer-events-none w-24 right-[-0.75rem] lg:w-56 h-auto lg:right-[-5.95rem] lg:top-12 absolute"
                     style={{
-                      right: '-1rem',
-                      top: '55%',
                       zIndex: 0,
-                      width: 'clamp(6.5rem, 13vw, 11rem)',
-                      height: 'clamp(6.5rem, 13vw, 11rem)',
                       objectFit: 'contain',
                       objectPosition: 'center bottom',
-                      transform: 'translate(-30%, -50%) rotate(-7deg)'
+                      transform: 'translate(-30%, -50%)'
                     }}
                   />
                 </motion.span>
@@ -162,7 +158,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, delay: 0.15 }}
-            className="mx-auto mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg"
+            className="mx-auto mt-12 max-w-3xl text-base leading-8 text-muted sm:text-lg"
           >
             {content.hero.description}
           </motion.p>

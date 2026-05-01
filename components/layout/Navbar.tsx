@@ -143,8 +143,8 @@ export function Navbar() {
                 </button>
               ))}
 
-              <div className="mt-2 border-t border-border/60 pt-3 text-center text-xs font-medium text-muted">
-                Powered by DekatLokal
+              <div className="mt-2 border-t border-border/60 pt-3 text-center text-xs text-muted">
+                Powered by <span className="font-bold underline">DekatLokal</span>
               </div>
             </div>
           </motion.div>
