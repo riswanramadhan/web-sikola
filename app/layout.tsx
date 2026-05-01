@@ -15,7 +15,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: 'Sikola Indonesia — Platform Mentoring Mahasiswa',
+  title: 'Sikola Indonesia | Platform Mentoring Mahasiswa',
   description:
     'Platform bimbingan personal untuk mahasiswa Indonesia: kompetisi, beasiswa, dan persiapan karier bersama mentor berprestasi.',
   keywords: [
@@ -26,9 +26,9 @@ export const metadata: Metadata = {
     'bimbingan kompetisi'
   ],
   icons: {
-    icon: '/images/logo-sikola.png',
-    shortcut: '/images/logo-sikola.png',
-    apple: '/images/logo-sikola.png'
+    icon: '/images/logo-sikolaa.png',
+    shortcut: '/images/logo-sikolaa.png',
+    apple: '/images/logo-sikolaa.png'
   },
   openGraph: {
     title: 'Sikola Indonesia',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     url: '/',
     images: [
       {
-        url: '/images/logo-sikola.png',
+        url: '/images/logo-sikolaa.png',
         width: 1200,
         height: 630,
         alt: 'Sikola Indonesia'
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Sikola Indonesia',
     description: "Let's Grow To Be Successful — Platform Mentoring Mahasiswa",
-    images: ['/images/logo-sikola.png']
+    images: ['/images/logo-sikolaa.png']
   }
 }
 
