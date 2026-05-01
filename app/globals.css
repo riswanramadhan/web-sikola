@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary-start: #045498;
+  --color-primary-end: #053c63;
+  --color-accent: #fdaf0f;
+  --color-white: #ffffff;
+  --color-bg: #f8fafd;
+  --color-text: #1a1a2e;
+  --color-text-muted: #6b7280;
+  --color-border: #e5e9f0;
+  --color-card: #ffffff;
+  --color-card-hover: #f0f6ff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(4, 84, 152, 0.06), transparent 25%),
+    radial-gradient(circle at 85% 15%, rgba(253, 175, 15, 0.08), transparent 20%),
+    linear-gradient(180deg, #fbfdff 0%, #f8fafd 100%);
+  color: var(--color-text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(4, 84, 152, 0.18);
+  color: #053c63;
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8;
+  }
+
+  .brand-card {
+    @apply rounded-2xl border border-border bg-white shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-lift;
+  }
+
+  .brand-focus {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white;
+  }
+}
