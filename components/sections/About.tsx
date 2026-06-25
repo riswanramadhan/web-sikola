@@ -24,8 +24,8 @@ export function About() {
         >
           <div className="relative aspect-[5/4] animate-floaty">
             <Image
-              src="/images/maskot.png"
-              alt="Maskot Sikola Indonesia"
+              src="/images/maskot-sikola-indonesia.png"
+              alt="Maskot Sikola Indonesia platform mentoring mahasiswa"
               fill
               sizes="(min-width: 1024px) 520px, 100vw"
               className="object-contain"
@@ -47,8 +47,8 @@ export function About() {
               <div className="rounded-[32px] bg-brand-gradient p-1.5 shadow-soft">
                 <div className="relative w-full overflow-hidden rounded-[26px] bg-bg aspect-square sm:aspect-[5/4]">
                   <Image
-                    src="/images/mentors/rifal-ceo.png"
-                    alt={content.about.founderName}
+                    src="/images/mentors/rifal-ceo-optimized.png"
+                    alt="Rifal S.E pendiri dan CEO Sikola Indonesia"
                     fill
                     sizes="(min-width: 1024px) 420px, 100vw"
                     className="object-cover"

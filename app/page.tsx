@@ -5,11 +5,13 @@ import { Hero } from '@/components/sections/Hero'
 import { Mentors } from '@/components/sections/Mentors'
 import { Navbar } from '@/components/layout/Navbar'
 import { Programs } from '@/components/sections/Programs'
+import { StructuredData } from '@/components/seo/StructuredData'
 import { ScrollToTopButton } from '@/components/ui/ScrollToTopButton'
 
 export default function Page() {
   return (
     <main className="relative overflow-hidden">
+      <StructuredData />
       <Navbar />
       <Hero />
       <About />

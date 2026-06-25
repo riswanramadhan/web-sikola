@@ -73,10 +73,11 @@ export function Navbar() {
           type="button"
           onClick={() => scrollToSection('hero')}
           className="brand-focus flex h-12 w-[180px] items-center sm:h-14 sm:w-[220px]"
+          aria-label="Kembali ke beranda Sikola Indonesia"
         >
           <Image
             src="/images/logo-sikola.png"
-            alt="Sikola Indonesia"
+            alt="Logo Sikola Indonesia platform mentoring mahasiswa"
             width={220}
             height={56}
             className="h-full w-full object-contain object-left"
@@ -91,6 +92,7 @@ export function Navbar() {
                 key={item.id}
                 type="button"
                 onClick={() => scrollToSection(item.id)}
+                aria-label={`Buka bagian ${item.label} Sikola Indonesia`}
                 className={`brand-focus group relative text-sm font-medium ${active ? 'text-primary-dark' : 'text-muted'}`}
               >
                 {item.label}
@@ -116,7 +118,7 @@ export function Navbar() {
             type="button"
             onClick={() => setMobileOpen((current) => !current)}
             className="brand-focus inline-flex h-11 w-11 items-center justify-center rounded-full border border-border bg-white text-text shadow-sm transition hover:-translate-y-0.5 lg:hidden"
-            aria-label="Toggle navigation menu"
+            aria-label="Buka atau tutup menu navigasi Sikola Indonesia"
           >
             {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -138,6 +140,7 @@ export function Navbar() {
                   key={item.id}
                   type="button"
                   onClick={() => scrollToSection(item.id)}
+                  aria-label={`Buka bagian ${item.label} Sikola Indonesia`}
                   className={`brand-focus rounded-xl px-4 py-3 text-left text-sm font-semibold transition-colors ${
                     activeSection === item.id ? 'bg-primary/10 text-primary-dark' : 'text-text hover:bg-gray-50'
                   }`}
@@ -149,9 +152,10 @@ export function Navbar() {
               <div className="mt-2 border-t border-border/60 pt-3 text-center text-xs text-muted">
                 Powered by{' '}
                 <a
-                  href="https://www.dekatlokal.com"
+                  href="https://dekatlokal.com/"
                   target="_blank"
                   rel="noreferrer noopener"
+                  aria-label="Kunjungi DekatLokal partner digital Sikola Indonesia"
                   className="font-bold underline"
                 >
                   DekatLokal

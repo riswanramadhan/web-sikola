@@ -93,6 +93,7 @@ export function Hero() {
               }}
               className="relative inline-flex flex-col items-start overflow-visible text-left font-poppins text-[3.2rem] leading-[0.55] tracking-tight sm:text-[5.6rem] lg:text-[8.9rem]"
             >
+              <span className="sr-only">Sikola Indonesia - Platform Mentoring Mahasiswa Indonesia</span>
               <span
                 className="block"
                 style={{
@@ -141,6 +142,8 @@ export function Hero() {
                     src="/images/bintang.png"
                     alt=""
                     aria-hidden="true"
+                    width={3406}
+                    height={1875}
                     className="pointer-events-none w-24 right-[-0.75rem] lg:w-56 h-auto lg:right-[-5.95rem] lg:top-12 absolute"
                     style={{
                       zIndex: 0,
@@ -169,11 +172,11 @@ export function Hero() {
             transition={{ duration: 0.45, delay: 0.25 }}
             className="mt-8 flex flex-col justify-center gap-3 sm:flex-row"
           >
-            <Button href="#programs">
+            <Button href="#programs" aria-label="Lihat program mentoring Sikola Indonesia">
               {content.hero.ctaPrimary}
               <ArrowRight className="h-4 w-4" />
             </Button>
-            <Button href="#contact" variant="outline">
+            <Button href="#contact" variant="outline" aria-label="Hubungi admin Sikola Indonesia">
               {content.hero.ctaSecondary}
             </Button>
           </motion.div>

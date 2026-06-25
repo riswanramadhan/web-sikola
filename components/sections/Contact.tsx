@@ -15,6 +15,7 @@ function ContactInfoCard({
   label,
   value,
   href,
+  ariaLabel,
   external = false,
   iconClassName = 'bg-brand-gradient text-white'
 }: {
@@ -22,11 +23,18 @@ function ContactInfoCard({
   label: string
   value: string
   href: string
+  ariaLabel: string
   external?: boolean
   iconClassName?: string
 }) {
   return (
-    <a href={href} target={external ? '_blank' : undefined} rel={external ? 'noreferrer noopener' : undefined} className="brand-focus block w-full">
+    <a
+      href={href}
+      target={external ? '_blank' : undefined}
+      rel={external ? 'noreferrer noopener' : undefined}
+      aria-label={ariaLabel}
+      className="brand-focus block w-full"
+    >
       <Card className="flex items-start gap-4 p-5 transition-transform duration-300 hover:-translate-y-1">
         <div className={`flex h-12 w-12 items-center justify-center rounded-2xl ${iconClassName}`}>{icon}</div>
         <div>
@@ -52,12 +60,14 @@ export function Contact() {
             label={content.contact.emailLabel}
             value="sikolaindonesia@gmail.com"
             href={contactLinks.email}
+            ariaLabel="Hubungi Sikola Indonesia via email"
           />
           <ContactInfoCard
             icon={<Phone className="h-5 w-5" />}
             label={content.contact.phoneLabel}
             value="+62 851 8566 3696"
             href={contactLinks.whatsapp}
+            ariaLabel="Hubungi admin Sikola Indonesia via WhatsApp"
             external
             iconClassName="bg-accent text-primary-dark"
           />
@@ -66,6 +76,7 @@ export function Contact() {
             label={content.contact.addressLabel}
             value="Jl. Utama Unhas, Tamalanrea Indah, Kota Makassar"
             href={contactLinks.address}
+            ariaLabel="Buka lokasi Sikola Indonesia di Google Maps"
             external
           />
         </div>
@@ -83,7 +94,12 @@ export function Contact() {
               </div>
             </div>
             <div className="mt-6 border-t border-white/15 pt-5">
-              <Button href={contactLinks.whatsappChannel} external variant="accent">
+              <Button
+                href={contactLinks.whatsappChannel}
+                external
+                variant="accent"
+                aria-label="Gabung saluran WhatsApp Sikola Indonesia"
+              >
                 {content.contact.whatsappButton}
               </Button>
             </div>
@@ -92,13 +108,13 @@ export function Contact() {
           <Card className="p-6">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">{content.contact.socialHeading}</p>
             <div className="mt-4 flex flex-wrap gap-3">
-              <a href={contactLinks.instagram} target="_blank" rel="noreferrer noopener" aria-label={content.contact.socialButtons.instagram} className="brand-focus flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-pink-500 via-fuchsia-500 to-yellow-400 text-white transition hover:scale-110">
+              <a href={contactLinks.instagram} target="_blank" rel="noreferrer noopener" aria-label="Kunjungi Instagram resmi Sikola Indonesia" className="brand-focus flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-pink-500 via-fuchsia-500 to-yellow-400 text-white transition hover:scale-110">
                 <FaInstagram />
               </a>
-              <a href={contactLinks.tiktok} target="_blank" rel="noreferrer noopener" aria-label={content.contact.socialButtons.tiktok} className="brand-focus flex h-12 w-12 items-center justify-center rounded-full bg-black text-white transition hover:scale-110">
+              <a href={contactLinks.tiktok} target="_blank" rel="noreferrer noopener" aria-label="Kunjungi TikTok resmi Sikola Indonesia" className="brand-focus flex h-12 w-12 items-center justify-center rounded-full bg-black text-white transition hover:scale-110">
                 <FaTiktok />
               </a>
-              <a href={contactLinks.linkedin} target="_blank" rel="noreferrer noopener" aria-label={content.contact.socialButtons.linkedin} className="brand-focus flex h-12 w-12 items-center justify-center rounded-full bg-[#0077B5] text-white transition hover:scale-110">
+              <a href={contactLinks.linkedin} target="_blank" rel="noreferrer noopener" aria-label="Kunjungi LinkedIn resmi Sikola Indonesia" className="brand-focus flex h-12 w-12 items-center justify-center rounded-full bg-[#0077B5] text-white transition hover:scale-110">
                 <FaLinkedinIn />
               </a>
             </div>

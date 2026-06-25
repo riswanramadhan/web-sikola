@@ -88,6 +88,7 @@ export function Programs() {
             value={search}
             onChange={(event) => setSearch(event.target.value)}
             placeholder={content.programs.searchPlaceholder}
+            aria-label="Cari program mentoring Sikola Indonesia"
             className="w-full bg-transparent outline-none placeholder:text-muted"
           />
         </label>
@@ -122,7 +123,12 @@ export function Programs() {
                       <h4 className="mt-5 line-clamp-2 font-poppins text-lg font-semibold text-text">{program.title}</h4>
                       <p className="mt-3 line-clamp-4 text-sm leading-7 text-muted">{program.description}</p>
                       <div className="mt-auto pt-6">
-                        <Button href={program.link} external className="w-full">
+                        <Button
+                          href={program.link}
+                          external
+                          className="w-full"
+                          aria-label={`Daftar ${program.title} di Sikola Indonesia`}
+                        >
                           {content.programs.registerNow}
                         </Button>
                       </div>
@@ -160,7 +166,13 @@ export function Programs() {
                         <h4 className="mt-3 line-clamp-2 font-poppins text-xl font-bold text-primary-dark">{program.title}</h4>
                         <p className="mt-2 line-clamp-3 text-sm leading-7 text-muted">{program.description}</p>
                       </div>
-                      <Button href={program.link} external variant="outline" className="lg:min-w-44">
+                      <Button
+                        href={program.link}
+                        external
+                        variant="outline"
+                        className="lg:min-w-44"
+                        aria-label={`Daftar ${program.title} di Sikola Indonesia`}
+                      >
                         {content.programs.registerNow}
                       </Button>
                     </Card>

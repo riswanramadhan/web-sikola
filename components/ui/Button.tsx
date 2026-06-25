@@ -29,10 +29,19 @@ export function Button({
   const baseClasses =
     'inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold transition-all duration-300 brand-focus'
   const classes = `${baseClasses} ${variantClasses[variant]} ${className}`.trim()
+  const ariaLabel = props['aria-label']
+  const title = props.title
 
   if (href) {
     return (
-      <a href={href} className={classes} target={external ? '_blank' : undefined} rel={external ? 'noreferrer noopener' : undefined}>
+      <a
+        href={href}
+        className={classes}
+        target={external ? '_blank' : undefined}
+        rel={external ? 'noreferrer noopener' : undefined}
+        aria-label={ariaLabel}
+        title={title}
+      >
         {children}
       </a>
     )

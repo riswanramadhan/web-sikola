@@ -7,7 +7,7 @@ export const contactLinks = {
   whatsappChannel: 'https://whatsapp.com/channel/0029VazBa6M8vd1UedPs8x2T',
   instagram: 'https://instagram.com/sikola.in',
   tiktok: 'https://www.tiktok.com/@sikola.indonesia',
-  linkedin: 'http://www.linkedin.com/company/sikola-indonesia/'
+  linkedin: 'https://www.linkedin.com/company/sikola-indonesia/'
 }
 
 export const programFormLinks = {
